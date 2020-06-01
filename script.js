@@ -78,7 +78,7 @@ StoreList()
 }
 // edit function
 function edit(index){
-  let change = prompt ("Edit your ToDo",List[index])
+  let change = prompt ("Edit your TO-DO",List[index])
   if (change != ''){
   List[index] = change
   }
