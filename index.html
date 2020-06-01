@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>To-do-List</title>
+</head>
+<body style="background-color:#d7d9da;">
+    <center>
+    <h2>Login</h2>
+    <p>Username: <input type="text" id="username"></p>
+    <p>password: <input type="password" id="password"></p><br>
+    <p id="message"></p>
+    <button class="btn btn-secondary" type="button" onclick="login()">Login</button>
+ 
+</center>
+</body>
+<script>
+    let users = [
+    {
+        username: "Muhammad",
+        password: "Password123"
+    },
+    {
+        username: "Yanbo",
+        password: "wordPass123"
+    }
+]
+    function login(){
+    let username = document.getElementById("username").value
+    let password = document.getElementById("password").value
+    // array with user data
+
+// validating the input with a loop trough the array
+for (let i= 0; i < users.length; i++){
+if(username == users[i].username && password == users[i].password) {
+            localStorage.setItem("username", username);
+            window.location.href = "ToDolist.html";
+			
+			return
+		}
+      
+}
+document.getElementById("message").innerHTML="given data is incorrect";
+
+    }
+</script>
+</html>

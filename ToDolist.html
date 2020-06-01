@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+</head>
+<body style="background-color:#d7d9da;">
+    <div class=".container">
+    
+    <center>
+<h2 id="Greet"> </h2>
+<input type="button" value="Logout" class="btn btn-secondary" onclick="window.location.href='index.html'">
+
+<br>
+<div class="col align-self-center">
+<br>
+<form id="form">
+  <input placeholder="Enter Todo" type="text"  id="newtd" minlength="1">
+  <input placeholder="Tag your todo" type="text" id="tag" >
+
+
+    <button class="btn btn-secondary" onclick="addToDo()">add to list</button><br>
+    </form>
+    <br>
+    <div class="container-md">
+    <h3>Your Todos</h3>
+    <input class="col-md-4" type="text" id="Search" placeholder="Search in Todos" onkeyup="filter()">
+    <ul class="list-group" id="todos">
+    </ul>
+</div>
+</div>
+    <script src="script.js">
+    </script>
+</center>
+</body>
+</html>
